@@ -1,5 +1,13 @@
 ---
+import { Cloudinary} from '@cloudinary/url-gen'
 
+
+import ImageUpload from '../components/ImageUpload.jsx'
+const cld = new Cloudinary({
+	cloud: {
+		cloudName : 'makingthings'
+	}
+})
 ---
 
 <html lang="en">
@@ -12,5 +20,6 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<ImageUpload client:load />
 	</body>
 </html>
